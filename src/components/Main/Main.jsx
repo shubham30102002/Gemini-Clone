@@ -46,7 +46,7 @@ const Main = () => {
                         <div className='result'>
                             <div className="result-title">
                                 <img src={assets.user_icon} alt='' />
-                                <p>{recentPrompt} shubham</p>
+                                <p>{recentPrompt}</p>
                                 {/* prompt display nhi ho raha hai  */}
                             </div>
 

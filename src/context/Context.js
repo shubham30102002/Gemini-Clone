@@ -12,7 +12,7 @@ const ContextProvider = (props) => {
     const [resultData,setResultData] = useState(""); 
 
     //typing effect
-    const deplayPara = (index, nextWord) => {
+    const delayPara = (index, nextWord) => {
         setTimeout(function (){
             setResultData(prev=> prev+nextWord);
         },75*index)
@@ -31,7 +31,7 @@ const ContextProvider = (props) => {
         setShowResult(true);
         
         let response;
-        if(prompt.length !== 0) {
+        if(prompt !== undefined) {
             response = await runChat(prompt);
             setRecentPrompt(prompt);
         }else{
@@ -56,7 +56,7 @@ const ContextProvider = (props) => {
         let newResponseArray = newResponse2.split(" ");
         for(let i=0;i<newResponseArray.length;i++){
             const nextWord = newResponseArray[i];
-            deplayPara(i,nextWord +" ");
+            delayPara(i,nextWord +" ");
         }
         setLoading(false);
         setInput('');

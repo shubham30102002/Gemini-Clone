@@ -148,6 +148,7 @@
 .result-data {
     display: flex;
     align-items: start;
+    margin-bottom: 100px;
     gap: 20px;
 }
 
